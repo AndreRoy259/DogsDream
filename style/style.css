@@ -8,33 +8,49 @@
 
 body {
   font-family: "Montserrat Alternates", sans-serif;
-}
-
-.hero {
-  min-height: 100vh;
-  position: relative;
   overflow: hidden;
 }
 
-.hero .title {
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  margin-top: 1.25rem;
-  z-index: 10;
+.header {
+  min-height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  text-align: center;
 }
 
-.hero .title h1 {
-  font-size: 3.5rem;
-  text-align: center;
+.header h1 {
+  font-size: 5rem;
+  margin: 0 5rem;
+}
+
+.credit {
+  margin: 0 1rem;
+  font-size: 0.75rem;
+}
+
+.credit a {
+  text-decoration: none;
+  color: #666;
+}
+
+.hero {
+  min-height: 95vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero img {
   position: absolute;
   left: 0;
-  top: 10%;
+  top: 0;
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -48,7 +64,7 @@ body {
 .hero video {
   position: absolute;
   left: 0;
-  top: 10%;
+  top: 0;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -97,5 +113,23 @@ body {
   }
 }
 
-/* @media (max-width: ) */
+@media screen and (max-width: 768px) {
+  .header {
+    margin-top: 1rem;
+  }
+  .header h1 {
+    font-size: 3rem;
+    margin: 0 2.5rem;
+  }
+  .credit {
+    margin: 0 0.5rem;
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
